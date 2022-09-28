@@ -14,7 +14,9 @@
    <button @click="yes = ! yes">YES</button>
    <p v-if="yes">vue is awesome</p>
    <p v-else>not like </p>
-
+  <hr>
+  <button @click="count++">Add 1</button>
+  <p>Count is: {{ count }}</p>
 
 
 
@@ -29,6 +31,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+ data () {
+    return {
+      count: 0
     }
   }
 }
