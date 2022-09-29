@@ -6,7 +6,7 @@
    <!-- looping statements -->
    <h4>looper</h4>
    <ul>
-    <li v-for="index in 5" key="index">
+    <li v-for="index in 5" v-bind:key="index">
      <p>{{index}} * 5 ={{index *5}}</p>
     </li>
    </ul>
@@ -17,7 +17,8 @@
   <hr>
   <button @click="count++">Add 1</button>
   <p>Count is: {{ count }}</p>
-
+  <hr>
+  
 
 
 
@@ -39,6 +40,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
