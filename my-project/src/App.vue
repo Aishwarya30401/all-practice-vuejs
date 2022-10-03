@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+ <router-view/>
   </div>
 </template>
-
 <script>
+import practice from './components/practice.vue'
 export default {
   name: 'App'
+
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

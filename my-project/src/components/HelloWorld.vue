@@ -3,7 +3,6 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <hr>
-   <!-- looping statements -->
    <h4>looper</h4>
    <ul>
     <li v-for="index in 5" v-bind:key="index">
@@ -18,12 +17,7 @@
   <button @click="count++">Add 1</button>
   <p>Count is: {{ count }}</p>
   <hr>
-  
-
-
-
   </div>
-
 </template>
 
 <script>
@@ -33,17 +27,9 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  },
- data () {
-    return {
-      count: 0
-    }
   }
 }
-
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
   font-weight: normal;
