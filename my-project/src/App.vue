@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import practice from './components/practice.vue'
+
 export default {
   name: 'App'
 
