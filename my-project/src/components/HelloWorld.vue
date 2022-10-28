@@ -1,7 +1,11 @@
 <template>
-  <div class="hello">
+  <div>
+    <p>transition</p>
+  <button @click="show = !show">Toggle</button>
+  <Transition>
+  <button v-if="show">click me</button>
+  </Transition>
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
     <hr>
    <h4>looper</h4>
    <ul>
@@ -24,7 +28,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome'
     }
   }
 }
@@ -35,5 +39,16 @@ h1, h2 {
 }
 a {
   color: #42b983;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+.v-enter-from{
+  border :1px solid red;
+}
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

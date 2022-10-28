@@ -1,19 +1,34 @@
-<div id="app">
- <ul>
-   <li v-for="x in todos">
-   {{ x.text }}
-   </li>
-  </ul>
-</div>
+<template>
+  <a href="#/">Home</a> |
+  <a href="#/about">About</a> |
+  <component :is="currentView" />
+</template>
 
 <script>
-myObject = new Vue({
-    el: '#app',
-    data: {
-    todos: [
-        { text: 'Learn JavaScript' },
-        { text: 'Learn Vue.js' },
-        { text: 'Build Something Awesome' }
-        ]
+import Home from './Home.vue'
+import About from './About.vue'
+import NotFound from './NotFound.vue'
+
+const routes = {
+  '/': Home,
+  '/about': About
+}
+
+export default {
+  data() {
+    return {
+      currentPath: window.location.hash
     }
-})
+  },
+  computed: {
+    currentView() {
+      return routes[this.currentPath.slice(1) || '/'] || NotFound
+    }
+  },
+  mounted() {
+    window.addEventListener('hashchange', () => {
+		  this.currentPath = window.location.hash
+		})
+  }
+}
+</script>
