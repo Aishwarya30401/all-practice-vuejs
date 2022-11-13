@@ -11,6 +11,7 @@
   "dependencies": {
     "vue-js-counter": "^1.0.3",
     "vue-router": "^4.1.6",
-    "vue2-transitions": "^0.3.0"
+    "vue2-transitions": "^0.3.0",
+    "vuex": "^4.0.2"
   }
 }
